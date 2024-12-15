@@ -1,0 +1,15 @@
+spring:
+  test: "dev"
+
+aws:
+  key:
+    access: ${AWS_ACCESS_KEY_ID}
+    secret: ${AWS_SECRET_ACCESS_KEY}
+  s3:
+    bucket:
+      landing: ${LANDING_BUCKET}
+      logging: ${LOGGING_BUCKET_NAME}
+    key:
+      fun: ${FUN_BUCKET_KEY}
+      logging: ${LOGGING_BUCKET_KEY}
+      title: ${TITLE_BUCKET_KEY}

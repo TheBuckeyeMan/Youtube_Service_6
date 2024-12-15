@@ -1,0 +1,20 @@
+spring:
+  test: "Prod-test"
+aws:
+  key:
+    access: ${AWS_ACCESS_KEY_ID}
+    secret: ${AWS_SECRET_ACCESS_KEY}
+  s3:
+    bucket:
+      landing: ${LANDING_BUCKET}
+      logging: ${LOGGING_BUCKET_NAME}
+    key:
+      gpt: ${GPT_BUCKET_KEY}
+      logging: ${LOGGING_BUCKET_KEY}
+      audio: ${AUDIO_BUCKET_KEY}
+  region: ${AWS_REGION}
+api:
+  name: ${API_NAME}
+  aws:
+    url:
+      polly: ${API_URL}
