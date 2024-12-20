@@ -18,10 +18,11 @@ public class CreateTitle {
             JsonNode rootNode = objectMapper.readTree(funFact);
 
             String title = rootNode.get(0).get("fact").asText();
+            title = title.substring(0,MAX_LENGTH).trim() + "...  #Shorts  #Viral  #YouTubeShorts #fyp";
 
-            //Ensure we dont exceed 90 Charictors
+            //Ensure we dont exceed 99 Charictors
             if (title.length() > MAX_LENGTH){
-                title = title.substring(0,MAX_LENGTH).trim() + "..." + " #Shorts" + " #Viral" + " #YouTubeShorts" + " #fyp";
+                log.error("The title: " + title + " is to long and needs to be shortaned before we can upload.");
             }
             log.info("The title of the video will be: " + title);
             return title;
