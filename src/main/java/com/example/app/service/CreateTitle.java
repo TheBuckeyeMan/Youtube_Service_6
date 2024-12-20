@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class CreateTitle {
     private static final Logger log = LoggerFactory.getLogger(CreateTitle.class);
-    private static final int MAX_LENGTH = 70;
+    private static final int MAX_LENGTH = 50;
 
     public String getTitle(String funFact){
         try{
@@ -21,7 +21,7 @@ public class CreateTitle {
 
             //Ensure we dont exceed 90 Charictors
             if (title.length() > MAX_LENGTH){
-                title = title.substring(0,MAX_LENGTH).trim() + "..." + " #Shorts";
+                title = title.substring(0,MAX_LENGTH).trim() + "..." + " #Shorts" + " #Viral" + " #YouTubeShorts" + " #fyp";
             }
             log.info("The title of the video will be: " + title);
             return title;

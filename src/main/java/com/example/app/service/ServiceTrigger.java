@@ -62,6 +62,6 @@ public class ServiceTrigger {
 
         //TODO Task 6: implement unit testing
 
-        //TODO FIgure out how to havethis log to logging bucket without causing a failure 
+        //TODO Figure out how to havethis log to logging bucket without causing a failure 
     }
 }
